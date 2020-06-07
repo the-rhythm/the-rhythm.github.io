@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="python,字符串,">
 
 
 
@@ -82,14 +82,18 @@
 
 
 
-<meta name="keywords" content="python java 量化 金融">
-<meta property="og:type" content="website">
-<meta property="og:title" content="the-rhythm">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="1.如何拆分含有多种分隔符的字符串Q: python str 的 split()方法只能对单一分隔符进行拆分，如果字符串中含多种分隔符，如何进行分隔？ A: 使用正则表达式 re.split() 123456import re# 分隔符是 ,|s = &apos;a,b,c|dd,e|ff|gg,hh,|ee&apos;# 使用 re.split(),其中, [] 内部为分隔符，+表示一个或多个res = re.sp">
+<meta name="keywords" content="python,字符串">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python技巧之字符串处理">
+<meta property="og:url" content="http://yoursite.com/2020/06/06/python技巧之字符串处理/index.html">
 <meta property="og:site_name" content="the-rhythm">
+<meta property="og:description" content="1.如何拆分含有多种分隔符的字符串Q: python str 的 split()方法只能对单一分隔符进行拆分，如果字符串中含多种分隔符，如何进行分隔？ A: 使用正则表达式 re.split() 123456import re# 分隔符是 ,|s = &apos;a,b,c|dd,e|ff|gg,hh,|ee&apos;# 使用 re.split(),其中, [] 内部为分隔符，+表示一个或多个res = re.sp">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-06-07T03:24:30.091Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="the-rhythm">
+<meta name="twitter:title" content="python技巧之字符串处理">
+<meta name="twitter:description" content="1.如何拆分含有多种分隔符的字符串Q: python str 的 split()方法只能对单一分隔符进行拆分，如果字符串中含多种分隔符，如何进行分隔？ A: 使用正则表达式 re.split() 123456import re# 分隔符是 ,|s = &apos;a,b,c|dd,e|ff|gg,hh,|ee&apos;# 使用 re.split(),其中, [] 内部为分隔符，+表示一个或多个res = re.sp">
 
 
 
@@ -119,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2020/06/06/python技巧之字符串处理/">
 
 
 
 
 
-  <title>the-rhythm</title>
+  <title>python技巧之字符串处理 | the-rhythm</title>
   
 
 
@@ -144,8 +148,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,9 +273,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -302,9 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/06/python技巧之字符串处理/" itemprop="url">python技巧之字符串处理</a></h1>
+          <h1 class="post-title" itemprop="name headline">python技巧之字符串处理</h1>
         
 
         <div class="post-meta">
@@ -335,6 +336,11 @@
           
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
           
 
           
@@ -385,20 +391,74 @@
       
 
       
-        
-          
-          1.如何拆分含有多种分隔符的字符串Q: python str 的 split()方法只能对单一分隔符进行拆分，如果字符串中含多种分隔符，如何进行分隔？
-A: 使用正则表达式 re.split()
-123456import re# 分隔符是 ,|s = 'a,b,c|dd,e|ff|gg,hh,|ee
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/06/06/python技巧之字符串处理/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h3 id="1-如何拆分含有多种分隔符的字符串"><a href="#1-如何拆分含有多种分隔符的字符串" class="headerlink" title="1.如何拆分含有多种分隔符的字符串"></a>1.如何拆分含有多种分隔符的字符串</h3><p>Q: python str 的 split()方法只能对单一分隔符进行拆分，如果字符串中含多种分隔符，如何进行分隔？</p>
+<p><strong><em>A: 使用正则表达式 re.split()</em></strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="comment"># 分隔符是 ,|</span></span><br><span class="line">s = <span class="string">'a,b,c|dd,e|ff|gg,hh,|ee'</span></span><br><span class="line"><span class="comment"># 使用 re.split(),其中, [] 内部为分隔符，+表示一个或多个</span></span><br><span class="line">res = re.split(<span class="string">'[,|]+'</span>,s)</span><br><span class="line">print(res)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;dd&apos;, &apos;e&apos;, &apos;ff&apos;, &apos;gg&apos;, &apos;hh&apos;, &apos;ee&apos;]</code></pre><h3 id="2-判断字符串是否以某个字符串结尾或开头"><a href="#2-判断字符串是否以某个字符串结尾或开头" class="headerlink" title="2.判断字符串是否以某个字符串结尾或开头"></a>2.判断字符串是否以某个字符串结尾或开头</h3><p>Q: 如何判断字符串是否以某个字符串结尾或多个字符串结尾或开头</p>
+<p><strong><em>A : 使用字符串方法 startswith 或 endswith</em></strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'abcdefgwee'</span></span><br><span class="line"><span class="comment"># 判断 s 是否以 abc 开头</span></span><br><span class="line">print(s.startswith(<span class="string">'abc'</span>))</span><br><span class="line"><span class="comment"># 判断 s 是否以 wee 结尾</span></span><br><span class="line">print(s.endswith(<span class="string">'wee'</span>))</span><br></pre></td></tr></table></figure>
+
+<pre><code>True
+True</code></pre><p>如果要判断字符串是否以多个字符串结尾,需要用元组，下面的例子找出以.py和.java结尾的文件</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = [<span class="string">'hello.py'</span>,<span class="string">'hehe.js'</span>,<span class="string">'wee.c'</span>,<span class="string">'next.doc'</span>,<span class="string">'xx.java'</span>,<span class="string">'dwd.py'</span>]</span><br><span class="line">s1 = [ x <span class="keyword">for</span> x <span class="keyword">in</span> s <span class="keyword">if</span> x.endswith((<span class="string">'.py'</span>,<span class="string">'.java'</span>))]</span><br><span class="line">print(s1)</span><br></pre></td></tr></table></figure>
+
+<pre><code>[&apos;hello.py&apos;, &apos;xx.java&apos;, &apos;dwd.py&apos;]</code></pre><h3 id="3-如何调整字符串中的文本格式"><a href="#3-如何调整字符串中的文本格式" class="headerlink" title="3.如何调整字符串中的文本格式"></a>3.如何调整字符串中的文本格式</h3><p>Q : 某日志文件，其中的日期为yyy-mm-dd格式，需要把其中的日期改为美国日期格式mm/dd/yyyy，该如何做？</p>
+<p><strong><em>A : 使用正则表达式匹配所有的日期，然后更改为目标格式,python 正则模块re中的sub 方法能替换字符串</em></strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">s = <span class="string">'''2020-02-20 dosomething</span></span><br><span class="line"><span class="string">       2020-03-30 dosomething</span></span><br><span class="line"><span class="string">       2020-04-20 dosomething</span></span><br><span class="line"><span class="string">       2020-05-20 dosomething</span></span><br><span class="line"><span class="string">       2020-05-20 dosomething</span></span><br><span class="line"><span class="string">       2020-05-18 dosomething</span></span><br><span class="line"><span class="string">       '''</span></span><br><span class="line"><span class="comment"># 其中正则表达式 \d 表示整数 \d&#123;4&#125;表示4位整数 (\d&#123;4&#125;)表示分组</span></span><br><span class="line">s1 = re.sub(<span class="string">'(\d&#123;4&#125;)-(\d&#123;2&#125;)-(\d&#123;2&#125;)'</span>,<span class="string">r'\2/\3/\1'</span>,s)</span><br><span class="line"><span class="comment"># 也可以为每个分组起一个名字，使用 ?P&lt;name&gt;起名， /g&lt;name&gt; 引用 </span></span><br><span class="line">s2 = re.sub(<span class="string">'(?P&lt;year&gt;\d&#123;4&#125;)-(?P&lt;month&gt;\d&#123;2&#125;)-(?P&lt;day&gt;\d&#123;2&#125;)'</span>,<span class="string">r'\g&lt;month&gt;/\g&lt;day&gt;/\g&lt;year&gt;'</span>,s)</span><br><span class="line">print(s1)</span><br><span class="line">print(s2)</span><br></pre></td></tr></table></figure>
+
+<pre><code>02/20/2020 dosomething
+       03/30/2020 dosomething
+       04/20/2020 dosomething
+       05/20/2020 dosomething
+       05/20/2020 dosomething
+       05/18/2020 dosomething
+
+02/20/2020 dosomething
+       03/30/2020 dosomething
+       04/20/2020 dosomething
+       05/20/2020 dosomething
+       05/20/2020 dosomething
+       05/18/2020 dosomething</code></pre><p>​    </p>
+<h3 id="4-字符串拼接"><a href="#4-字符串拼接" class="headerlink" title="4.字符串拼接"></a>4.字符串拼接</h3><p>Q: 如何高效率拼接多个小字符串</p>
+<p><strong><em>A : 使用字符串方法 join()</em></strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">'xiaoming'</span>,<span class="string">'go'</span>,<span class="string">'home'</span>]</span><br><span class="line">s1 = <span class="string">' '</span>.join(a)</span><br><span class="line">s2 = <span class="string">'-'</span>.join(a)</span><br><span class="line">print(s1)</span><br><span class="line">print(s2)</span><br></pre></td></tr></table></figure>
+
+<pre><code>xiaoming go home
+xiaoming-go-home</code></pre><p>有时需要把列表元素全部转换为字符串然后拼接，可以使用生成器表达式,效率比较高</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">b = [<span class="number">123</span>,<span class="string">'shanghai'</span>,<span class="number">45</span>,<span class="string">'tiger'</span>]</span><br><span class="line">s3 = <span class="string">' '</span>.join((str(x) <span class="keyword">for</span> x <span class="keyword">in</span> b))</span><br><span class="line">print(s3)</span><br></pre></td></tr></table></figure>
+
+<pre><code>123 shanghai 45 tiger</code></pre><h3 id="5-字符串对齐"><a href="#5-字符串对齐" class="headerlink" title="5.字符串对齐"></a>5.字符串对齐</h3><p>Q : 如何对字符串进行左右居中对齐</p>
+<p><strong><em>A1: 使用字符串方法 ljust() rjust() center()*</em></strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'abcd'</span></span><br><span class="line"><span class="comment"># 第一个参数表示字符串最终宽度</span></span><br><span class="line">s1 = s.ljust(<span class="number">20</span>)</span><br><span class="line"><span class="comment"># 第二个参数表示填充字符</span></span><br><span class="line">s2 = s.ljust(<span class="number">20</span>,<span class="string">'-'</span>)</span><br><span class="line"><span class="comment"># 右对齐</span></span><br><span class="line">s3 = s.rjust(<span class="number">20</span>)</span><br><span class="line">s4 = s.rjust(<span class="number">20</span>,<span class="string">'-'</span>)</span><br><span class="line">print(s1)</span><br><span class="line">print(s2)</span><br><span class="line">print(s3)</span><br><span class="line">print(s4)</span><br></pre></td></tr></table></figure>
+
+<pre><code>abcd                
+abcd----------------
+                abcd
+----------------abcd</code></pre><p><strong><em>A2:使用字符串的format方法,&lt;表示左对齐,&gt;表示右对齐,^表示居中对齐</em></strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">s5 =<span class="string">'&#123;0: &lt;20&#125;'</span>.format(s)</span><br><span class="line">s6 = <span class="string">'&#123;0: &gt;20&#125;'</span>.format(s)</span><br><span class="line">s7 = <span class="string">'&#123;0:-&gt;20&#125;'</span>.format(s)</span><br><span class="line">s8 = <span class="string">'&#123;0:*^20&#125;'</span>.format(s)</span><br><span class="line">print(s5)</span><br><span class="line">print(s6)</span><br><span class="line">print(s7)</span><br><span class="line">print(s8)</span><br></pre></td></tr></table></figure>
+
+<pre><code>abcd                
+                abcd
+----------------abcd
+********abcd********</code></pre><h3 id="6-去掉字符串中不需要的字符"><a href="#6-去掉字符串中不需要的字符" class="headerlink" title="6.去掉字符串中不需要的字符"></a>6.去掉字符串中不需要的字符</h3><p>Q: 如何去掉字符串中不需要的字符</p>
+<p><strong><em>A1:使用strip() lstrip() rstrip()方法去除两端字符</em></strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">' xxxx@google.com  '</span></span><br><span class="line">s1 = s.strip()</span><br><span class="line">print(s1)</span><br></pre></td></tr></table></figure>
+
+<pre><code>xxxx@google.com</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">s2 = <span class="string">'----xxxx@google.com-----'</span></span><br><span class="line">s3 = s2.strip(<span class="string">'-'</span>)</span><br><span class="line">s4 = s2.lstrip(<span class="string">'-'</span>)</span><br><span class="line">s5 = s2.rstrip(<span class="string">'-'</span>)</span><br><span class="line">print(s3)</span><br><span class="line">print(s4)</span><br><span class="line">print(s5)</span><br></pre></td></tr></table></figure>
+
+<pre><code>xxxx@google.com
+xxxx@google.com-----
+----xxxx@google.com</code></pre><p><strong><em>A2: 使用字符串的方法 replace 或正则表达式 re.sub</em></strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如下，去掉s 中的 /t</span></span><br><span class="line">s = <span class="string">'/tabc/tefg/thjk/tmop/t'</span></span><br><span class="line">s1 = s.replace(<span class="string">'/t'</span>,<span class="string">''</span>)</span><br><span class="line">print(s1)</span><br></pre></td></tr></table></figure>
+
+<pre><code>abcefghjkmop</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s2 = re.sub(<span class="string">'[/t]'</span>,<span class="string">''</span>,s)</span><br><span class="line">print(s2)</span><br></pre></td></tr></table></figure>
+
+<pre><code>abcefghjkmop</code></pre><h3 id="7-如何做字符映射"><a href="#7-如何做字符映射" class="headerlink" title="7.如何做字符映射"></a>7.如何做字符映射</h3><p>Q: 有一个字符串，我们需要把字符串中的abc 映射为 123,该如何操作</p>
+<p><strong><em>A:使用字符串 translate方法</em></strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如下，如果我们需要把 abc 映射为 123</span></span><br><span class="line">s = <span class="string">'abcyzfdeg'</span></span><br><span class="line">trans_table = str.maketrans(<span class="string">'abc'</span>,<span class="string">'123'</span>)</span><br><span class="line">s1 = s.translate(trans_table)</span><br><span class="line">print(s1)</span><br></pre></td></tr></table></figure>
+
+<pre><code>123yzfdeg</code></pre>
       
     </div>
     
@@ -406,341 +466,83 @@ A: 使用正则表达式 re.split()
     
     <div>
      
+       <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:18px;">----------本文结束<i class="fa fa-paw"></i>感谢您的阅读---------</div>
+    
+</div>
+
+     
     </div>
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="the-rhythm 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="the-rhythm 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="the-rhythm">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar-2.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="the-rhythm">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/12/test/" itemprop="url">test</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-12T16:30:35+08:00">
-                2019-08-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i>python</a>
           
-            
+            <a href="/tags/字符串/" rel="tag"><i class="fa fa-tag"></i>字符串</a>
           
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  0
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/08/12/test/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/12/test/" rel="next" title="test">
+                <i class="fa fa-chevron-left"></i> test
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-     
-    </div>
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/12/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="the-rhythm">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar-2.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="the-rhythm">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/12/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-12T15:48:22+08:00">
-                2019-08-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  73
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/08/12/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-     
-    </div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -750,10 +552,38 @@ A: 使用正则表达式 re.split()
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -761,6 +591,10 @@ A: 使用正则表达式 re.split()
 
 
           
+
+  
+
+
 
         </div>
         
@@ -781,8 +615,17 @@ A: 使用正则表达式 re.split()
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -858,6 +701,22 @@ A: 使用正则表达式 re.split()
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-如何拆分含有多种分隔符的字符串"><span class="nav-number">1.</span> <span class="nav-text">1.如何拆分含有多种分隔符的字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-判断字符串是否以某个字符串结尾或开头"><span class="nav-number">2.</span> <span class="nav-text">2.判断字符串是否以某个字符串结尾或开头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-如何调整字符串中的文本格式"><span class="nav-number">3.</span> <span class="nav-text">3.如何调整字符串中的文本格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-字符串拼接"><span class="nav-number">4.</span> <span class="nav-text">4.字符串拼接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-字符串对齐"><span class="nav-number">5.</span> <span class="nav-text">5.字符串对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-去掉字符串中不需要的字符"><span class="nav-number">6.</span> <span class="nav-text">6.去掉字符串中不需要的字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-如何做字符映射"><span class="nav-number">7.</span> <span class="nav-text">7.如何做字符映射</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1020,6 +879,10 @@ A: 使用正则表达式 re.split()
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
